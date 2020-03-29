@@ -1,0 +1,13 @@
+apiVersion: project.openshift.io/v1
+kind: Project
+metadata:
+  annotations:
+    openshift.io/description: {{ .Values.projectName | quote }}
+    openshift.io/display-name: {{ .Values.projectName | quote }}
+    argocd.argoproj.io/sync-wave: "-1"
+  name: {{ .Values.projectName | quote }}
+  labels:
+    app.kubernetes.io/instance: {{ .Values.projectName | quote }}
+spec:
+  finalizers:
+  - kubernetes

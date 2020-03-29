@@ -20,6 +20,8 @@ version: 0.0.1
 # incremented each time you make changes to the application.
 appVersion: 1.0.0
 
+projectName: jenkins
+
 dependecy:
   - name: jenkins
     version: "0.0.1"
